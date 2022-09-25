@@ -1,0 +1,17 @@
+---
+title: Frakture
+subtitle: Hack from Hackmoney 2021
+---
+
+Frakture was an experiment in more on-chain functionality to enable NFT royalties to be trustlessly split between multiple stakeholders. It consists of [a royalty distribution contract](https://teeny-cover.surge.sh/#/dist) and [an NFT minting tool](https://teeny-cover.surge.sh/#/factory). 
+
+The royalty distribution contract creates a token to be used as shares for the recieved royalty payments, and initially mints it according to the distribution schedule set in the creation page. Then, shares can be traded as standard ERC20 transactions. 
+
+For the proof of concept, the distribution contract was limited to receiving and disbursing DAIx (superfluid wrapped DAI) on Polygon. 
+
+The NFT Minter contract allows an address to be specified to reward royalties to in compliance with ERC2981. Since this standard did not yet have widespread adoption at the time, the demo was designed for royalty distribution in a single token. With how ERC2981 has been used in the field, an additional contract could be inserted to convert all royalty payments to one disbursement token before being sent to the splitter contract, though this was not implemented during the hackathon.
+
+As shown on the [ETHGlobal Showcase Page](https://showcase.ethglobal.com/hackfs2021/frakture), the project won the runner-up prize for Best use of Superfluid, and the Protocol Labs pool prize. 
+
+This project gave me experience using Hardhat as a build environment for unifying React and Solidity development, and taught me how to deploy webpages and NFTs on IPFS.
+
