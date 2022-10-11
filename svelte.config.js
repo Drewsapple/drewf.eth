@@ -31,6 +31,10 @@ const config = {
 				"/courses/softwareEngineering",
 				"/writings",
 				"/writings/article_1",
+				"/api/posts",
+				"/api/projects",
+				"/api/courses",
+				"/api/writings",
 			]
 		}
 	}
