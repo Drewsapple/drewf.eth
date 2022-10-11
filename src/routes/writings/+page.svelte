@@ -5,7 +5,7 @@
 </script>
 
 <div class="py-1">
-{#if data.posts}
-<Gallery contents={data.posts} />
-{/if}
+	{#if data.posts}
+		<Gallery title="Writings" summary="My thoughts and articles" contents={data.posts} />
+	{/if}
 </div>

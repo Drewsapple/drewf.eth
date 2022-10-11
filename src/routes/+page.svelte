@@ -6,7 +6,7 @@
 
 <div
 	id="gradient"
-	class="h-screen bg-fixed overflow-scroll m-0 bg-gradient-to-b from-slate-200 via-slate-100  to-purple-200"
+	class="h-screen bg-fixed overflow-y-auto overflow-x-clip m-0 p-0 bg-gradient-to-b from-slate-200 via-slate-100  to-purple-200"
 >
 	<div
 		id="landing"
