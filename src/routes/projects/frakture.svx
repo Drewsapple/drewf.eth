@@ -1,6 +1,7 @@
 ---
 title: Frakture
-subtitle: Hack from Hackmoney 2021
+subtitle: A hack from Hackmoney 2021
+hidden: false
 ---
 
 Frakture was an experiment in more on-chain functionality to enable NFT royalties to be trustlessly split between multiple stakeholders. It consists of [a royalty distribution contract](https://teeny-cover.surge.sh/#/dist) and [an NFT minting tool](https://teeny-cover.surge.sh/#/factory). 

@@ -20,8 +20,19 @@ const config = {
 		})
 	],
 
+
+	//
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			entries: [
+				"/",
+				"/courses",
+				"/courses/softwareEngineering",
+				"/writings",
+				"/writings/article_1",
+			]
+		}
 	}
 };
 

@@ -1,0 +1,6 @@
+---
+title: MiniGolf
+hidden: true
+---
+
+Here's the explanation

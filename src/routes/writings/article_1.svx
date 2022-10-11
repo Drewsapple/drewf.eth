@@ -1,6 +1,6 @@
 ---
-title: "Raise"
-subtitle: A crowdfunding dapp
+title: Test Article
+hidden: true
 ---
 
 Here's body *text*

@@ -2,12 +2,12 @@
     const {title, subtitle} = $$props
 </script>
 
-<article class="max-w-2xl mx-auto p-2">
+<article class="max-w-2xl mx-auto p-2 prose">
     {#if title}
-    <h1 class="text-2xl font-bold">{title}</h1>
+    <h1>{title}</h1>
     {/if}
     {#if subtitle}
-    <h2 class="text-xl font-medium text-gray-500">{subtitle}</h2>
+    <h2>{subtitle}</h2>
     {/if}
     <slot />
 </article>
