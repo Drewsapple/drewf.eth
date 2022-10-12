@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
+import adapterStatic from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 
@@ -21,22 +22,24 @@ const config = {
 	],
 
 
-	//
+	// Include paths unreachable from index to allow prerender
 	kit: {
-		adapter: adapter(),
+		adapter: !!process.env.STATIC_SITE ? adapterStatic() : adapter(),
 		prerender: {
 			entries: [
 				"/",
-				"/courses",
-				"/courses/softwareEngineering",
-				"/writings",
-				"/writings/article_1",
+				"/courses/",
+				"/courses/softwareEngineering/",
+				"/projects/",
+				"/writings/",
+				"/writings/article_1/",
 				"/api/posts",
 				"/api/projects",
 				"/api/courses",
 				"/api/writings",
 			]
-		}
+		},
+		trailingSlash: 'always'
 	}
 };
 
