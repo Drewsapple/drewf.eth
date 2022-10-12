@@ -27,7 +27,7 @@
 						/></a
 					>
 					<a class="btn btn-ghost btn-square normal-case" href="https://twitter.com/drewsapple111"
-						><img alt="Twitter" src="/icons/Twitter social icons - circle - blue.svg" class="inline-block h-8 w-8" /></a
+						><img alt="Twitter" src="/icons/Twitter social icons - circle - blue.png" class="inline-block h-8 w-8" /></a
 					>
 				</div>
 			</div>
