@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Gallery from '$lib/components/Gallery.svelte';
+	import SocialButton from '$lib/components/SocialButton.svelte';
 
 	export let data;
 </script>
@@ -19,16 +20,9 @@
 					<h1 class="text-violet-600 font-bold text-4xl sm:text-6xl">Drew Fisher</h1>
 				</div>
 				<div class="my-4 mx-auto md:ml-0 md:mr-auto w-full shadow-lg rounded-md bg-slate-100 flex items-center p-2 space-x-4 max-w-min">
-					<a class="btn btn-ghost btn-square normal-case" href="https://github.com/drewsapple"
-						><img
-							alt="Github"
-							src="/icons/GitHub-Mark-120px-plus.png"
-							class="inline-block h-8 w-8"
-						/></a
-					>
-					<a class="btn btn-ghost btn-square normal-case" href="https://twitter.com/drewsapple111"
-						><img alt="Twitter" src="/icons/Twitter social icons - circle - blue.png" class="inline-block h-8 w-8" /></a
-					>
+					<SocialButton alt="Github" link="https://github.com/drewsapple" iconPath="/icons/GitHub-Mark-120px-plus.png" tip="@Drewsapple" />
+					<SocialButton alt="Twitter" link="https://twitter.com/drewsapple111" iconPath="/icons/Twitter social icons - circle - blue.png" tip="@Drewsapple111" />
+					<SocialButton alt="Lenster" link="https://lenster.xyz/u/DrewF.lens" iconPath="/icons/LENS LOGO__Lens_ icon.png" tip="@DrewF.lens" />
 				</div>
 			</div>
 		</div>
