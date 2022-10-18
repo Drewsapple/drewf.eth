@@ -55,6 +55,7 @@ const pin = async (ensToPin, cid) => {
         console.log(res);
         return false;
     }
+    console.log(await fetch(`https://${res.data.name}.limo`));
     return true;
 }
 
@@ -63,4 +64,5 @@ const cid = await deploy();
 if(!!cid && !!process.env.DWEBSERVICES_KEY) {
     await pin("me.drewf.eth", cid);
 }
-process.exit();
+// Wait for propogation before kill
+setTimeout(() => process.exit(), 60000);
