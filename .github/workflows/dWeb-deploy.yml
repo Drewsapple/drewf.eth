@@ -13,6 +13,8 @@ on:
 jobs:
   deployment:
     environment: Production
+    env:
+      DWEBSERVICES_KEY: ${{ secrets.DWEBSERVICES_KEY }}
     runs-on: ubuntu-latest
 
     steps:
