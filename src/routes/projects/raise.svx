@@ -1,9 +1,10 @@
 ---
 title: Raise
-subtitle: A crowdfunding dapp
-hidden: true
+subtitle: A crowdfunding dapp from 0xHack 2021
+hidden: false
 ---
+Raise was created to demonstrate a basic kickstarter-style crowdfunding escrow service, but using a smart contract as the counterparty. It was [deployed on netlify](https://0xraise.netlify.app/#/), using the Ropsten testnet. 
 
-Here's body *text*
+This was my first project using either React or Ethereum, and while limited in functionality, gave me an understanding of tooling for dApp development (Netlify+Fauna for Web2 hosting, Truffle for smart contract development, and useDapp to simplify using Ethereum in React).
 
-![Image](https://via.placeholder.com/200)
+A walkthrough is available [here](https://youtu.be/pfIPt60Xjdc).
