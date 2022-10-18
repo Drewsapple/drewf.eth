@@ -1,5 +1,6 @@
 // Most code here is borrowed from github.com/scaffold-eth/scaffold-eth
 import { create, globSource } from "ipfs-core";
+import { select_option } from "svelte/internal";
 
 const ipfs = await create();
 
@@ -30,7 +31,7 @@ const deploy = async () => {
 	console.log();
 
 	console.log(`Use the link below to access your app:`);
-	console.log(`🚀 IPFS: https://${cid.toV1().toString()}.ipfs.dweb.link`);
+	console.log(`🚀 Launched on IPFS: https://${cid.toV1().toString()}.ipfs.dweb.link`);
 	return cid.toV1();
 };
 
@@ -46,17 +47,33 @@ const pin = async (ensToPin, cid) => {
     const res = await response.json();
     console.log("");
     if(res.status == "ok") {
-        console.log(`📡 Pinned to DWebServices`);
+        console.log(`📡 Updated IPNS hash on DWebServices`);
         console.log("");
-        console.log(`🚀 ENS: https://${res.data.name}.limo`);
+        const pinStatus = async () => (await (await fetch(`https://dwebservices.xyz/api/eth-names-ipns/get_by_name/${ensToPin}`, {
+            method: 'GET',
+            headers: {
+                'accept': 'application/json',
+                'Authorization': `Bearer ${process.env.DWEBSERVICES_KEY}`,
+            }
+        })).json()).data.published_status
+        const pinned = new Promise((resolve, reject) => {
+            setInterval(async () => {
+                const status = await pinStatus()
+                if(status == "active") resolve(status)
+                else if(status == "failed") reject(status)
+                else console.log(`IPNS pinning status: ${status}`)
+            }, 3000);
+        })
+
+        await (pinned.then( () => {
+            console.log(`🚀 Pinned on ENS: https://${res.data.name}.limo`);
+        }).catch(reason => console.log(`dwebservices pinning failed with status: ${reason}`)))
     }
     else {
         console.log(`📡 ENS/DwebServices pinning failed.`);
         console.log(res);
         return false;
     }
-    console.log(await fetch(`https://${res.data.name}.limo`));
-    return true;
 }
 
 const cid = await deploy();
@@ -64,5 +81,4 @@ const cid = await deploy();
 if(!!cid && !!process.env.DWEBSERVICES_KEY) {
     await pin("me.drewf.eth", cid);
 }
-// Wait for propogation before kill
-setTimeout(() => process.exit(), 60000);
+process.exit()

@@ -8,6 +8,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"dweb": "STATIC_SITE=1 vite build && env-cmd --no-override --silent node ./scripts/pinDWeb.js",
+		"ens": "env-cmd --no-override --silent node ./scripts/pinDWeb.js",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
