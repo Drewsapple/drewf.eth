@@ -11,7 +11,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  deployment:
+    environment: production
     runs-on: ubuntu-latest
 
     steps:
