@@ -12,7 +12,7 @@ on:
 
 jobs:
   deployment:
-    environment: production
+    environment: Production
     runs-on: ubuntu-latest
 
     steps:
