@@ -21,4 +21,4 @@ jobs:
       with:
         node-version: "18.x"
         cache: 'npm'
-    - run: npm dweb
+    - run: npm run dweb
