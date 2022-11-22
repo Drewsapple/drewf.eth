@@ -21,7 +21,7 @@
 				</div>
 				<div class="my-4 mx-auto md:ml-0 md:mr-auto w-full shadow-lg rounded-md bg-slate-100 flex items-center p-2 space-x-4 max-w-min">
 					<SocialButton alt="Github" link="https://github.com/drewsapple" iconPath="/icons/GitHub-Mark-120px-plus.png" tip="@Drewsapple" />
-					<SocialButton alt="Twitter" link="https://twitter.com/drewsapple111" iconPath="/icons/Twitter social icons - circle - blue.png" tip="@Drewsapple111" />
+					<SocialButton alt="Twitter" link="https://twitter.com/0xDrewF" iconPath="/icons/Twitter social icons - circle - blue.png" tip="@0xDrewF" />
 					<SocialButton alt="Lenster" link="https://lenster.xyz/u/DrewF.lens" iconPath="/icons/LENS LOGO__Lens_ icon.png" tip="@DrewF.lens" />
 				</div>
 			</div>
